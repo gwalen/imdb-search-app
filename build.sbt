@@ -29,35 +29,3 @@ PostgresMigrations.settings
 
 // SBT Native packager
 enablePlugins(JavaAppPackaging)
-
-// Integration tests
-//lazy val ItTest = config("it") extend Test
-//configs(ItTest)
-//
-//inConfig(ItTest)(
-//  Defaults.testSettings ++
-//    PostgresMigrations.itSettings ++
-//    Seq(
-//      executeTests  := (executeTests dependsOn flywayMigrate).value,
-//      flywayMigrate := (flywayMigrate dependsOn flywayClean).value
-//    ))
-
-// Scapegoat
-//scapegoatVersion in ThisBuild := "1.3.8"
-//scapegoatDisabledInspections := Seq(
-//  "IncorrectlyNamedExceptions",
-//  "FinalModifierOnCaseClass"
-//)
-//scapegoatMaxErrors   := 0
-//scapegoatMaxWarnings := 0
-//scapegoatMaxInfos    := 0
-
-// Load env variables for TEST from development.env file
-//fork in Test := true
-//javaOptions in Test := {
-//  val envExport = """export\s(\w+=[^\s]+)""".r
-//  Source.fromFile("development.env").getLines.toList.flatMap {
-//    case envExport(env) => Some(s"-D$env")
-//    case _              => None
-//  }
-//}

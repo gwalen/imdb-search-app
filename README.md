@@ -11,9 +11,9 @@ download and run PostgreSQL 9.6:
 
 `docker run --name postgis96 -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d mdillon/postgis:9.6`
 
-After initial download;
-stop  : `docker stop postgis96`
-start : `docker start postgis96`
+After initial download:  
+stop  : `docker stop postgis96`  
+start : `docker start postgis96`  
 
 #### Start application ####
 
@@ -92,24 +92,23 @@ by id:
 
 Results count by kevin bacon distance:
 
-`
-select count(*) from cast_members where kevin_bacon_distance = 0; -- 1
-select count(*) from cast_members where kevin_bacon_distance = 1; -- 2 200
-select count(*) from cast_members where kevin_bacon_distance = 2; -- 258 104
-select count(*) from cast_members where kevin_bacon_distance = 3; -- 1 739 188
-select count(*) from cast_members where kevin_bacon_distance = 4; -- 1 280 845
-select count(*) from cast_members where kevin_bacon_distance = 5; -- 179 621
-select count(*) from cast_members where kevin_bacon_distance = 6; -- 19 838
-select count(*) from cast_members where kevin_bacon_distance = 7; -- 2 455
-select count(*) from cast_members where kevin_bacon_distance = 8; -- 394
-select count(*) from cast_members where kevin_bacon_distance = 9; -- 79
-select count(*) from cast_members where kevin_bacon_distance = 10; -- 23
-select count(*) from cast_members where kevin_bacon_distance = 11; -- 4
-`
+>select count(*) from cast_members where kevin_bacon_distance = 0; -- 1  
+>select count(*) from cast_members where kevin_bacon_distance = 1; -- 2 200    
+>select count(*) from cast_members where kevin_bacon_distance = 2; -- 258 104  
+>select count(*) from cast_members where kevin_bacon_distance = 3; -- 1 739 188  
+>select count(*) from cast_members where kevin_bacon_distance = 4; -- 1 280 845  
+>select count(*) from cast_members where kevin_bacon_distance = 5; -- 179 621  
+>select count(*) from cast_members where kevin_bacon_distance = 6; -- 19 838  
+>select count(*) from cast_members where kevin_bacon_distance = 7; -- 2 455  
+>select count(*) from cast_members where kevin_bacon_distance = 8; -- 394  
+>select count(*) from cast_members where kevin_bacon_distance = 9; -- 79  
+>select count(*) from cast_members where kevin_bacon_distance = 10; -- 23  
+>select count(*) from cast_members where kevin_bacon_distance = 11; -- 4  
+
 
 Person with no connection to Kevin Bacon:
 
-`select count(*) from cast_members where kevin_bacon_distance = -1; -- 5 764 199`
+>select count(*) from cast_members where kevin_bacon_distance = -1; -- 5 764 199
 
 
 
